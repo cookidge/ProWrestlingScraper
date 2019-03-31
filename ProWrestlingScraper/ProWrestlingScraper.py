@@ -22,7 +22,7 @@ def write_csv(csvFile, row):
     skipinitialspace=False)
 
     # write row to file
-    with open(csvFile, 'a', newline='') as f:
+    with open(csvFile, 'a', newline='', encoding="utf-8") as f:
         writer = csv.writer(f, dialect='quoted')
         writer.writerow(row)
 
